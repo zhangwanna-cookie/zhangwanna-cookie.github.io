@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Build a Document Website - Hugo Whisper Theme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://zhangwanna-cookie.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.e8d6bf7aae6d60e6f0604d1b5ea57dd66411e3babd64b14ec4d5bf44984217c7.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://zhangwanna-cookie.github.io/"><img alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://zhangwanna-cookie.github.io/"><img alt="Logo" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="active ">
+      <a href="https://zhangwanna-cookie.github.io/docs/build-a-docs-site/buildsite/">Build a Document Website</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Build a Document Website</h1>
+<div class="content ">
+  <p>This document introduces a series of steps to build a document website for MacOS by using the open source project <a href="https://gohugo.io/">Hugo</a>. By publishing the website code to GitHub, everyone could visit the website through .io domain, provided by GitHub page.</p>
+<h3 id="step-1-install-homebrew">Step 1: Install Homebrew</h3>
+<p>Homebrew is a management tool kit for MacOS platform, with many practical functions, such as installing, uninstalling, updating, viewing, searching and etc.</p>
+<p>Verify that you have installed Homebrew.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew --version
+</code></pre></div><p>If you have installed the tool kit, the terminal displays <code>Homebrew version number</code>.</p>
+<table>
+<thead>
+<tr>
+<th><img src="image1.png" alt="Alt name of image"></th>
+</tr>
+</thead>
+</table>
+<p>Otherwise,execut the code below to install Homebrew.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
+</code></pre></div><p>If your installation failed with unstable network,you could change to the mirror source to install it. Copying the below code to execute following the steps.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/bin/zsh -c &#34;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&#34;
+</code></pre></div><p>To verify your new install again.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew --version
+</code></pre></div><h3 id="step-2-install-hugo">Step 2: Install Hugo</h3>
+<p>Hugo is an open source project that can be used to build static websites quickly. Meanwhile, it also provides varieties of themes, which can be applied directly.</p>
+<p>Installing Hugo.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install hugo
+</code></pre></div><p>To verify whether your installation was successful. If you succeed, the terminal displays &ldquo;Hugo version number&rdquo;.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo version
+</code></pre></div><h3 id="step-3-create-a-new-site">Step 3: Create a New Site</h3>
+<p>You could create a new site when you completed the steps above. <code>example</code> is my website name, you could name your site as you like.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo new site example
+</code></pre></div><p>The above will create a new Hugo site in a folder.</p>
+<h3 id="step-4-add-a-theme">Step 4: Add a Theme</h3>
+<p>Enter the site folder you just created. Then you could clone the theme from GitHub and add it to your site&rsquo;s <code>themes</code> directory. My site&rsquo;s theme is <code> hugo-whisper-theme</code>, you could choose different theme in <a href="https://themes.gohugo.io/">Hugo theme library</a>. And this step would expend a few minutes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd example
+git init
+git clone https://github.com/jugglerx/hugo-whisper-theme.git themes/hugo-whisper-theme
+</code></pre></div><h3 id="step-5-modify-configuration-file">Step 5: Modify Configuration File</h3>
+<p>Confirm you are still in the site directory. I&rsquo;m currently in the <code>example</code> directory. Delete profile <code>config.toml</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">rm  config.toml
+</code></pre></div><p>In order to add example content,copy the entire contents of the <code>themes/hugo-whisper-theme/exampleSite/</code> folder to the root folder of your site, ie <code>example/</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cp -a themes/hugo-whisper-theme/exampleSite/. .
+</code></pre></div><p>By now the config.toml have been updated. Open the file and enter the edit mode(input &ldquo;i&rdquo;).</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">vi config.toml
+</code></pre></div><p>Modify the <code>baseURL</code>, <code>themesDir</code>, and <code>theme</code> values of the <code>config.toml</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">baseURL = &#34;/&#34;
+
+themesDir = &#34;themes&#34;
+
+theme = &#34;hugo-whisper-theme&#34;
+</code></pre></div><h3 id="step-6-local-testing">Step 6: Local Testing</h3>
+<p>In the Hugo site directory, start Hugo serve.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Hugo server -D
+</code></pre></div><p>If the server starts successfully, the terminal will display like this.</p>
+<table>
+<thead>
+<tr>
+<th><img src="image2.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Then you could copy <code>localhost:1313</code> to the browser address bar to view.</p>
+<h3 id="step-7-create-a-new-github-repository">Step 7: Create a New GitHub Repository</h3>
+<p>When you do this step, you have registered a git account and logged in.</p>
+<table>
+<thead>
+<tr>
+<th><img src="image3.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Click the green button <code>Create repository</code> on the left side of the page. To fill in the configuration items according the below picture and click the green button <code>Create repository</code> on the bottom.</p>
+<table>
+<thead>
+<tr>
+<th><img src="image4.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>It is necessary to remind you, repository name must be composed of <code>owner</code>, <code>.github </code> and <code>.io</code>. (your repository name =your owner + .github.io  )</p>
+<h3 id="step-8-deploy-code-to-github">Step 8: Deploy Code to GitHub</h3>
+<p>To build a public folder that can be published to the repository that you created just now.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo --theme=hugo-whisper-theme --baseUrl=&#34;https://zhangwanna-cookie.github.io/&#34;
+</code></pre></div><p>Then enter the <code>public</code> directory and deploy code to GitHub.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd public
+
+git init
+
+git add .
+
+git commit -m &#39;first commit&#39;
+
+git remote add origin https://github.com/zhangwanna-cookie/zhangwanna-cookie.github.io.git
+
+git push -u origin master
+</code></pre></div><h3 id="step-9-check-the-site">Step 9: Check the Site</h3>
+<p>To enter <code>https://zhangwanna-cookie.github.io/ </code> to the browser address bar to view the site.</p>
+<table>
+<thead>
+<tr>
+<th><img src="image5.png" alt=""></th>
+</tr>
+</thead>
+</table>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
